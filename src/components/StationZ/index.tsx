@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { StationContainer } from './styles';
 import { ThemeContext } from '../../context/theme';
+import { ArtSlider } from '../ArtSlider';
 
 const StationZ = () => {
     const theme = useContext(ThemeContext);
@@ -8,6 +9,7 @@ const StationZ = () => {
     return (
         <StationContainer background={theme.background}>
             <h1 style={theme.textStyle}>Welcome, Zachary</h1>
+            <ArtSlider />
         </StationContainer>
     );
 }

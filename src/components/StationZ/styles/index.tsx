@@ -11,8 +11,9 @@ export const StationContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 1rem;
 `;
 
 

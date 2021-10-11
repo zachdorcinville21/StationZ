@@ -8,6 +8,7 @@ interface StationTheme {
     background: string;
     font: string;
     textStyle: { [key: string]: string };
+    artStyle: { [key: string]: string };
 }
 
 const ThemeDefault: StationTheme = {
@@ -16,6 +17,11 @@ const ThemeDefault: StationTheme = {
     textStyle: {
         fontFamily: 'Dosis',
         color: '#000000',
+    },
+    artStyle: {
+        width: '200px', 
+        height: '200px',
+        borderRadius: '2px',
     },
 };
 
