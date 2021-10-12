@@ -26,7 +26,7 @@ const CalEvent = (props: CalEventProps) => {
     return (
         <CustomPaper>
             <h2 style={theme.textStyle}>{props.title}</h2>
-            <p style={theme.textStyle}>{`Today, ${moment(props.start).format('ha')}`}</p>
+            <p style={theme.textStyle}>{`Today, ${moment(props.start).format('h:mma')}`}</p>
             <a style={theme.textStyle} href={props.link} target="_blank" rel="noreferrer">Go to meeting</a>
         </CustomPaper>
     );
