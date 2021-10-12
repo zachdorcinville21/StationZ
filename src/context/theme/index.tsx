@@ -12,11 +12,11 @@ interface StationTheme {
 }
 
 const ThemeDefault: StationTheme = {
-    background: 'rgb(227, 150, 62)', 
+    background: 'rgb(39, 55, 70)', 
     font: 'Dosis',
     textStyle: {
         fontFamily: 'Dosis',
-        color: '#000000',
+        color: '#ffffff',
     },
     artStyle: {
         width: '200px', 
