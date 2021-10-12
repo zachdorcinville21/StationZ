@@ -37,19 +37,17 @@ const Calendar = () => {
 
             if (auth2.isSignedIn.get()) {
                 const email = auth2.currentUser.get().getBasicProfile().getEmail();
-                getCalEvents(email);
+
+                const events = await gapi.client.request({
+                    path: `https://www.googleapis.com/calendar/v3/calendars/${email}/events?timeMin=${timeMin}&timeMax=${timeMax}&timeZone=GMT-04:00&singleEvents=true`,
+                });
+
+                if (events) {
+                    setEvents(events.result.items);
+                }
             }
         });
-    }, [signedIn]);
-
-    const getCalEvents = async (email: string) => {
-        const events = await gapi.client.request({
-            path: `https://www.googleapis.com/calendar/v3/calendars/${email}/events?timeMin=${timeMin}&timeMax=${timeMax}&timeZone=GMT-04:00&singleEvents=true`,
-        });
-        if (events) {
-            setEvents(events.result.items);
-        }
-    }
+    }, [signedIn, timeMin, timeMax]);
 
     const handleAuthClick = async () => {
         await gapi.auth2.getAuthInstance().signIn();
