@@ -10,7 +10,7 @@ export const StationContainer = styled.div`
     background-color: ${({ background }: SCProps) => background};
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
     justify-content: flex-start;
     align-items: center;
     padding-top: 1rem;
